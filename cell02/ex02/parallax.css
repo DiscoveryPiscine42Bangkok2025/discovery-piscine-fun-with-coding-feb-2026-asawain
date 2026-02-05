@@ -1,0 +1,35 @@
+body, html {
+    margin: 0;
+}
+
+.parallax {
+    height: 100vh;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.one {
+    background-image: url("https://static.wikia.nocookie.net/projectsekai/images/7/7c/It%27s_All_Over.png/revision/latest/scale-to-width-down/1000?cb=20241012090806");
+}
+
+.two {
+    background-image: url("https://static.wikia.nocookie.net/projectsekai/images/c/cc/In_Excruciating_Twilight.png/revision/latest/scale-to-width-down/1000?cb=20241012090940");
+}
+
+.text {
+    color: white;
+    font-size: 48px;
+}
+
+.block {
+    height: 300px;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,30 @@
+body {
+    font-family: Arial;
+}
+
+.menu {
+    width: 200px;
+}
+
+.menu-title {
+    background: #003366;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.menu-content {
+    display: none;
+    background: #f0f0f0;
+}
+
+.menu-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.menu:hover .menu-content {
+    display: block;
+}
