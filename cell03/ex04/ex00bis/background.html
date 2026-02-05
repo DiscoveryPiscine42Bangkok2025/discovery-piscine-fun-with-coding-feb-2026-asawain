@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Change Background</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Internal CSS -->
+    <style>
+        body {
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+<button id="change">Change background</button>
+
+<script>
+    $("#change").click(function () {
+        const color =
+            "#" + Math.floor(Math.random() * 16777215).toString(16);
+        $("body").css("background-color", color);
+    });
+</script>
+
+</body>
+</html>
+

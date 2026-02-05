@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Balloon</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        #balloon {
+            width: 200px;
+            height: 200px;
+            background: red;
+            border-radius: 50%;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="balloon"></div>
+
+<script>
+let size = 200;
+let colors = ["red", "green", "blue"];
+let index = 0;
+
+// click ขยาย + เปลี่ยนสี
+$("#balloon").click(function () {
+    size += 10;
+    if (size > 420) size = 200;
+
+    index = (index + 1) % colors.length;
+    update();
+});
+
+// mouse leave  หด + เปลี่ยนสีย้อน
+$("#balloon").mouseleave(function () {
+    size = Math.max(200, size - 5);
+
+    index = (index + colors.length - 1) % colors.length;
+    update();
+});
+
+// อัปเดต balloon
+function update() {
+    $("#balloon").css({
+        width: size + "px",
+        height: size + "px",
+        backgroundColor: colors[index]
+    });
+}
+</script>
+
+</body>
+</html>
